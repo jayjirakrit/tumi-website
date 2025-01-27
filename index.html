@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav
+      class="flex items-center justify-between p-6 lg:px-8"
+      aria-label="Global"
+    >
+      <div class="flex lg:flex-1">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">Your Company</span>
+          <img class="h-12 w-auto" src="./img/Cinnamoroll.png" alt="" />
+        </a>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a
+          href="index.html"
+          class="nav-element text-sm font-semibold leading-6 text-gray-900"
+          >Home</a
+        >
+        <a
+          href="/page/journey.html"
+          class="nav-element text-sm font-semibold leading-6 text-gray-900"
+          >Journey</a
+        >
+        <a
+          href="/page/about.html"
+          class="nav-element text-sm font-semibold leading-6 text-gray-900"
+          >About</a
+        >
+        <a
+          href="#"
+          class="nav-element text-sm font-semibold leading-6 text-gray-900"
+          >Other</a
+        >
+      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <!-- <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+          >Log in <span aria-hidden="true">&rarr;</span></a
+        > -->
+        <img class="h-14 w-auto" src="./img/docker.png" alt="" />
+      </div>
+    </nav>
+    <!-- Content -->
+
+    <!-- Welcome Section -->
+    <div
+      class="travel-bg bg-center bg-cover bg-no-repeat w-full flex flex-col justify-center items-center h-96 px-6"
+      style="
+        background-image: linear-gradient(
+            rgba(248, 244, 244, 0.634),
+            rgba(248, 244, 244, 0.81)
+          ),
+          url('img/travel.jpg');
+      "
+    >
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        Welcome to Tumi Website
+      </h1>
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        Where We Collect Our Memories
+      </h1>
+    </div>
+    <!-- We are Section -->
+    <div class="intro-section flex flex-col items-center h-lg pt-20 mb-20">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Who's watching?</h1>
+      <div class="intro-layout">
+        <ul class="intro">
+          <li>
+            <div
+              class="intro-item flex flex-col mt-8 ml-16 items-center justify-center"
+            >
+              <img src="/img/mon2.jpg" class="rounded w-auto object-cover" />
+              <span class="mt-4 font-semibold text-gray-500 text-2xl">Mon</span>
+            </div>
+          </li>
+          <li>
+            <div
+              class="intro-item flex flex-col mt-8 ml-16 items-center justify-center"
+            >
+              <img src="/img/jim1.jpg" class="rounded w-auto object-cover" />
+              <span class="mt-4 font-semibold text-gray-500 text-2xl"
+                >Jimmy</span
+              >
+            </div>
+          </li>
+          <li>
+            <div
+              class="intro-item flex flex-col mt-8 ml-16 items-center justify-center"
+            >
+              <img src="/img/journey/TW_2024_2.jpeg" class="rounded w-auto object-cover" />
+              <span class="mt-4 font-semibold text-gray-500 text-2xl">
+                Mon & Jimmy
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Record Travel Section -->
+    <div
+      class="travel-section flex flex-col justify-center items-center px-6 bg-amber-100"
+    >
+      <h1 class="text-4xl font-bold text-gray-900 mb-20">Record Counting</h1>
+      <div class="flex justify-between items-center count-container w-full">
+        <div
+          class="count-box flex flex-col items-center justify-center rounded-lg"
+        >
+          <h1 class="text-3xl text-orange-600 mb-4 text-center font-bold">
+            Countries
+          </h1>
+          <p class="text-2xl">4</p>
+        </div>
+        <div
+          class="count-box flex flex-col items-center justify-center rounded-lg"
+        >
+          <h1 class="text-3xl text-orange-600 mb-4 text-center font-bold">
+            Relationship
+          </h1>
+          <p class="text-2xl">5 years</p>
+        </div>
+        <div
+          class="count-box flex flex-col items-center justify-center rounded-lg"
+        >
+          <h1 class="text-3xl text-orange-600 mb-4 text-center font-bold">
+            Boardgame
+          </h1>
+          <p class="text-2xl">25</p>
+        </div>
+        <div
+          class="count-box flex flex-col items-center justify-center rounded-lg"
+        >
+          <h1 class="text-3xl text-orange-600 mb-4 text-center font-bold">
+            Other
+          </h1>
+          <p class="text-2xl">...</p>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="flex flex-col justify-center items-center h-96 px-6">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Footer</h1>
+    </div>
+  </body>
+</html>
