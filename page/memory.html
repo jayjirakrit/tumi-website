@@ -25,22 +25,22 @@
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">Your Company</span>
-          <img class="h-12 w-auto" src="/img/Cinnamoroll.png" alt="" />
+          <img class="h-12 w-auto" src="../img/Cinnamoroll.png" alt="" />
         </a>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
         <a
-          href="/index.html"
+          href="../index.html"
           class="nav-element text-sm font-semibold leading-6 text-gray-900"
           >Home</a
         >
         <a
-          href="/page/journey.html"
+          href="./journey.html"
           class="nav-element text-sm font-semibold leading-6 text-gray-900"
           >Journey</a
         >
         <a
-          href="/page/about.html"
+          href="./about.html"
           class="nav-element text-sm font-semibold leading-6 text-gray-900"
           >About</a
         >
@@ -50,28 +50,43 @@
           >Other</a
         >
       </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <img class="h-14 w-auto" src="/img/docker.png" alt="" />
+      <div class="lg:flex lg:flex-1 lg:justify-end">
+        <img class="h-14 w-auto" src="../img/docker.png" alt="" />
       </div>
     </nav>
 
-    <!-- Footer -->
-    <div class="flex flex-col justify-center items-center h-96 px-6">
-      <h1 class="text-4xl font-bold text-gray-900 mt-8 mb-4">
-        Happy Birthday and Our 5th Anniversary!!
-      </h1>
-      <br />
-      <h5 class="text-2xl text-gray-900 mb-4 ml-20 mr-20">
-        I'm so glad that I have met you and we are still together. This is a big
-        year for our as the first time having long distance , but somehow we
-        will overcome it. Thank you for everything, there won't be me in this
-        version without you. You really grow up and become a good kid. I wish
-        this is another best year for you and us. Wish your life happy, your job
-        easy, and have a good health. Let continue having precious time and
-        collecting more memory together. Love you so much
-        <span class="text-red-900">&#10084; &#10084;</span>, love you more than
-        yesterday, but less than tomorrow.
-      </h5>
+    <div class="intro-section flex flex-col items-center">
+      <button
+        onclick="displayAnny()"
+        class="bg-blue-600 text-white font-semibold rounded-lg"
+      >
+        5th Anniversary
+      </button>
+      <div
+        id="anny-2024"
+        class="collapse flex flex-col justify-center items-center h-96 px-6"
+      >
+        <h1 class="text-4xl font-bold text-gray-900 mt-8 mb-4">
+          Happy Birthday and Our 5th Anniversary!!
+        </h1>
+        <br />
+        <h5 class="text-2xl text-gray-900 mb-4 ml-20 mr-20">
+          I'm so glad that I have met you and we are still together. This is a
+          big year for our as the first time having long distance , but somehow
+          we will overcome it. Thank you for everything, there won't be me in
+          this version without you. You really grow up and become a good kid. I
+          wish this is another best year for you and us. Wish your life happy,
+          your job easy, and have a good health. Let continue having precious
+          time and collecting more memory together. Love you so much
+          <span class="text-red-900">&#10084; &#10084;</span>, love you more
+          than yesterday, but less than tomorrow.
+        </h5>
+      </div>
     </div>
   </body>
+  <script>
+    function displayAnny() {
+      anny = document.getElementById("anny-2024");
+    }
+  </script>
 </html>
