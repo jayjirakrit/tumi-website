@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/tumi-website/static/css/main.a611b4f2.css",
+    "main.js": "/tumi-website/static/js/main.7a93a163.js",
+    "static/js/488.b54fd3f9.chunk.js": "/tumi-website/static/js/488.b54fd3f9.chunk.js",
+    "static/media/Cinnamoroll_bg.png": "/tumi-website/static/media/Cinnamoroll_bg.a8ec5b819c00c99ff112.png",
+    "static/media/travel.jpg": "/tumi-website/static/media/travel.0e2d5db328c3bc4068a8.jpg",
+    "static/media/jim1.jpg": "/tumi-website/static/media/jim1.3b30a3ad87f7289d68cc.jpg",
+    "static/media/mon2.jpg": "/tumi-website/static/media/mon2.b1f16add798f0117e413.jpg",
+    "static/media/mon1.jpg": "/tumi-website/static/media/mon1.54a82932068bc91efd3f.jpg",
+    "static/media/KOR_2023_4.jpeg": "/tumi-website/static/media/KOR_2023_4.bfbb1c56d9b77b66e631.jpeg",
+    "static/media/KOR_2023_3.jpeg": "/tumi-website/static/media/KOR_2023_3.41b64c36774e654cd02b.jpeg",
+    "static/media/FMCG_BG.jpg": "/tumi-website/static/media/FMCG_BG.b22f1cd081dffedb5c6e.jpg",
+    "static/media/TW_2024_1.jpeg": "/tumi-website/static/media/TW_2024_1.a19898f9d6121e81db9c.jpeg",
+    "static/media/JP_2022_2.jpeg": "/tumi-website/static/media/JP_2022_2.809bcf9612e1358beba1.jpeg",
+    "static/media/KOR_2023_2.jpeg": "/tumi-website/static/media/KOR_2023_2.fbd118b8447f7e5c9fd8.jpeg",
+    "static/media/TW_2024_3.jpeg": "/tumi-website/static/media/TW_2024_3.c79eec5f8c8b18f3f5a7.jpeg",
+    "static/media/HK_2024_1.jpeg": "/tumi-website/static/media/HK_2024_1.404e95ec4f02f52c5130.jpeg",
+    "static/media/HK_2024_2.jpeg": "/tumi-website/static/media/HK_2024_2.fc772f604de862598472.jpeg",
+    "static/media/KOR_2023_1.jpeg": "/tumi-website/static/media/KOR_2023_1.8f028e2965159729d227.jpeg",
+    "static/media/JP_2022_4.jpeg": "/tumi-website/static/media/JP_2022_4.bf0544727ae2479a9b48.jpeg",
+    "static/media/JP_2022_3.jpeg": "/tumi-website/static/media/JP_2022_3.c6a79b2d2c313615ae3d.jpeg",
+    "static/media/TW_2024_2.jpeg": "/tumi-website/static/media/TW_2024_2.be87e6c78e6c85fd8ea4.jpeg",
+    "static/media/JP_2022_1.jpeg": "/tumi-website/static/media/JP_2022_1.72aca02827881f0d09bc.jpeg",
+    "static/media/HK_2024_3.jpeg": "/tumi-website/static/media/HK_2024_3.71060e04383f5c4d103a.jpeg",
+    "static/media/cake.png": "/tumi-website/static/media/cake.997d1606e86fb1507c83.png",
+    "static/media/KOR_Flag.png": "/tumi-website/static/media/KOR_Flag.d490c3e83ff25737a315.png",
+    "static/media/hearts.png": "/tumi-website/static/media/hearts.4367efa31dad8c2267e3.png",
+    "static/media/HK_Flag.png": "/tumi-website/static/media/HK_Flag.c237c6cc6e63b83fce6d.png",
+    "index.html": "/tumi-website/index.html",
+    "main.a611b4f2.css.map": "/tumi-website/static/css/main.a611b4f2.css.map",
+    "main.7a93a163.js.map": "/tumi-website/static/js/main.7a93a163.js.map",
+    "488.b54fd3f9.chunk.js.map": "/tumi-website/static/js/488.b54fd3f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a611b4f2.css",
+    "static/js/main.7a93a163.js"
+  ]
+}
