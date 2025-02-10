@@ -1,0 +1,18 @@
+body div.memory-page {
+  background-color: #eee;
+  min-height: 90vh;
+  padding-bottom: 3rem;
+}
+
+.card-section {
+  list-style-type: none;
+  display: flex;
+}
+
+.card-section li {
+  display: inline;
+}
+
+ul.card-section {
+  margin-bottom: 0px;
+}

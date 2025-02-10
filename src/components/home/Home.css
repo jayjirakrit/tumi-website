@@ -1,0 +1,83 @@
+.bg-opacity-50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.welcome-section {
+  height: 600px;
+}
+
+/* Intro Section */
+
+.intro-section {
+  height: 600px;
+}
+
+.intro-section ul {
+  padding-left: 0px;
+}
+
+.intro {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+
+.intro li {
+  display: inline;
+}
+
+.intro-item img {
+  height: 250px;
+  width: 250px;
+  border: 6px solid transparent;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.intro-item:hover img {
+  border-color: black;
+}
+
+.intro-item:hover span {
+  color: black;
+}
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  transition: transform 1.2s;
+  transform-style: preserve-3d;
+  position: absolute;
+}
+
+.flip-card-inner:hover {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.travel-section {
+  height: 500px;
+}
+
+.record-bg {
+  background-color: #FFF2C2;
+}
+
+.count-container {
+  height: 200px;
+}
+
+.count-box {
+  background-color: white;
+  width: 250px;
+  height: 220px;
+}

@@ -1,0 +1,79 @@
+.two-one-section {
+  height: 800px;
+  background-color: rgb(192, 214, 232);
+}
+
+.two-two-section {
+  height: 800px;
+  background-color: rgb(255, 203, 203);
+}
+
+.two-three-section {
+  height: 1400px;
+}
+
+.two-four-section {
+  height: 800px;
+  background-color: rgb(192, 214, 232);
+}
+
+.gallery {
+  position: relative;
+  text-align: center;
+  color: #333;
+}
+
+.gallery h2 {
+  margin-bottom: 20px;
+}
+
+.section-2024 {
+    margin-bottom: 100px;
+}
+
+.photo {
+  border: 8px solid white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.photo img {
+  display: block;
+  width: 300px;
+  height: auto;
+}
+
+.photo1 {
+  top: 0;
+  left: -30px;
+  z-index: 1;
+  transform: rotate(-10deg);
+}
+
+.photo2 {
+  top: -20px;
+  left: 50px;
+  z-index: 2;
+  transform: rotate(-5deg);
+}
+
+.photo2_5 {
+  top: -20px;
+  left: 50px;
+  z-index: 2;
+}
+
+.photo3 {
+  top: -40px;
+  left: 130px;
+  z-index: 3;
+  transform: rotate(5deg);
+}
+
+.photo4 {
+  top: -40px;
+  left: 130px;
+  z-index: 3;
+  transform: rotate(10deg);
+}

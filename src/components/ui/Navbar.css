@@ -1,0 +1,21 @@
+.nav-bar-layout {
+  background-color: white;
+}
+
+.nav-cust {
+  margin-right: 120px;
+}
+
+body a {
+  color: black;
+}
+
+.nav-item-cust:hover {
+  text-decoration: underline;
+  color: grey;
+
+}
+
+.cinmon-img {
+  height: 50px;
+}
