@@ -90,10 +90,13 @@ const card6Valen = () => {
       </h3>
       <br />
       <h5 class="text-2xl text-gray-900 mb-4 ml-20 mr-20">
-        I'm so glad that I have met you and we are still together. 
-        Love you so much
-        <span class="text-red-900">&#10084; &#10084;</span>, love you more than
-        yesterday, but less than tomorrow.
+        I love you so much na, really excited to show this website to you.
+        I hope you like it. I build this website to remind our good memorable and journey
+        along the way. Time flies so fast and this is our 6th tim valentine celebration laew na.
+        Let keep counting and celebrate na Bu. 
+        Staying, playing, being with you is the most fun for me.
+        Being good kid duay na while I'm aboard. Love you Bu Bu
+        <span class="text-red-900"> &#10084; &#10084;</span>
       </h5>
     </div>
   );
