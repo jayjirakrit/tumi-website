@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tumi-website/static/css/main.a611b4f2.css",
-    "main.js": "/tumi-website/static/js/main.7a93a163.js",
+    "main.js": "/tumi-website/static/js/main.83ca0273.js",
     "static/js/488.b54fd3f9.chunk.js": "/tumi-website/static/js/488.b54fd3f9.chunk.js",
     "static/media/Cinnamoroll_bg.png": "/tumi-website/static/media/Cinnamoroll_bg.a8ec5b819c00c99ff112.png",
     "static/media/travel.jpg": "/tumi-website/static/media/travel.0e2d5db328c3bc4068a8.jpg",
@@ -29,11 +29,11 @@
     "static/media/HK_Flag.png": "/tumi-website/static/media/HK_Flag.c237c6cc6e63b83fce6d.png",
     "index.html": "/tumi-website/index.html",
     "main.a611b4f2.css.map": "/tumi-website/static/css/main.a611b4f2.css.map",
-    "main.7a93a163.js.map": "/tumi-website/static/js/main.7a93a163.js.map",
+    "main.83ca0273.js.map": "/tumi-website/static/js/main.83ca0273.js.map",
     "488.b54fd3f9.chunk.js.map": "/tumi-website/static/js/488.b54fd3f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a611b4f2.css",
-    "static/js/main.7a93a163.js"
+    "static/js/main.83ca0273.js"
   ]
 }
