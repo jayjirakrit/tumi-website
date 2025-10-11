@@ -7,32 +7,33 @@ import Modal from "../ui/ModalEvent";
 import { useState } from "react";
 import BdImg from "../../img/memory/cake.png";
 import ValImg from "../../img/memory/hearts.png";
-import BirthDay4th from "../card/bd23/BirthdayCard4";
+
+const BirthDay4th = React.lazy(() => import("../card/bd23/BirthdayCard4"));
 
 const card5Valen = () => {
   return (
-    <div class="card-inside">
-      <div class="text-one">
+    <div className="card-inside">
+      <div className="text-one">
         Happy Valentine Day !!
         <br />
       </div>
-      <div class="text-two">
+      <div className="text-two">
         I'm so glad to be with you another year, still excited and heart race
         every time. Wish I could celebrate with you until we old. As always,
         Love you more than yesterday, but less than tommorow. Love you my king
         &#128150; &#128150;.
       </div>
-      <div class="heart"></div>
-      <div class="smile"></div>
-      <div class="eyes"></div>
+      <div className="heart"></div>
+      <div className="smile"></div>
+      <div className="eyes"></div>
     </div>
   );
 };
 
 const card4Valen = () => {
   return (
-    <div class="cardInside-memory">
-      <h3 class="back">Happy 4th Valentine's Day!</h3>
+    <div className="cardInside-memory">
+      <h3 className="back">Happy 4th Valentine's Day!</h3>
       <p>Love You Tumi!!, My Beloved Kid</p>
       <p>
         You are my kiddy, I'm so glad this is our 4th Valentine. Let celebrate
@@ -49,12 +50,12 @@ const card4Ann = () => {
 
 const card5Ann = () => {
   return (
-    <div class="flex flex-col justify-center items-center h-96 px-6">
-      <h1 class="text-4xl font-bold text-gray-900 mt-8 mb-4">
+    <div className="flex flex-col justify-center items-center h-96 px-6">
+      <h1 className="text-4xl font-bold text-gray-900 mt-8 mb-4">
         Happy Birthday and Our 5th Anniversary!!
       </h1>
       <br />
-      <h5 class="text-2xl text-gray-900 mb-4 ml-20 mr-20">
+      <h5 className="text-2xl text-gray-900 mb-4 ml-20 mr-20">
         I'm so glad that I have met you and we are still together. This is a big
         year for our as the first time having long distance , but somehow we
         will overcome it. Thank you for everything, there won't be me in this
@@ -62,7 +63,7 @@ const card5Ann = () => {
         this is another best year for you and us. Wish your life happy, your job
         easy, and have a good health. Let continue having precious time and
         collecting more memory together. Love you so much
-        <span class="text-red-900">&#10084; &#10084;</span>, love you more than
+        <span className="text-red-900">&#10084; &#10084;</span>, love you more than
         yesterday, but less than tomorrow.
       </h5>
     </div>
@@ -71,19 +72,19 @@ const card5Ann = () => {
 
 const card6Valen = () => {
   return (
-    <div class="flex flex-col justify-center items-center h-96 px-6">
-      <h3 class="text-4xl font-bold text-gray-900 mt-8 mb-4">
+    <div className="flex flex-col justify-center items-center h-96 px-6">
+      <h3 className="text-4xl font-bold text-gray-900 mt-8 mb-4">
         Happy our 6th Valentine!!
       </h3>
       <br />
-      <h5 class="text-2xl text-gray-900 mb-4 ml-20 mr-20">
+      <h5 className="text-2xl text-gray-900 mb-4 ml-20 mr-20">
         I love you so much na, really excited to show this website to you. I
         hope you like it. I build this website to remind our good memorable and
         journey along the way. Time flies so fast and this is our 6th tim
         valentine celebration laew na. Let keep counting and celebrate na Bu.
         Staying, playing, being with you is the most fun for me. Being good kid
         duay na while I'm aboard. Love you Bu Bu
-        <span class="text-red-900"> &#10084; &#10084;</span>
+        <span className="text-red-900"> &#10084; &#10084;</span>
       </h5>
     </div>
   );

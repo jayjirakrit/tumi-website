@@ -1,8 +1,6 @@
 import React, { useEffect, useMemo } from "react";
 import styles from "./Journey.module.css";
 import Navbar from "../ui/Navbar";
-import Footer from "../ui/Footer";
-import Travel from "../ui/Travel";
 import TokyoBg from "../../img/JP_Flag.png";
 import KoreaBg from "../../img/KOR_Flag.png";
 import HongkongBg from "../../img/HK_Flag.png";
@@ -27,6 +25,8 @@ import Hk25Img1 from "../../img/journey/HK_2025_1.jpg";
 import Hk25Img2 from "../../img/journey/HK_2025_2.jpg";
 import Hk25Img3 from "../../img/journey/HK_2025_3.jpg";
 import Music from "../../audio/cinnamon_music.mp3";
+
+const Travel = React.lazy(() => import("../ui/Travel"));
 
 const JourneyPage = () => {
   const [isPlaying, setIsPlaying] = React.useState(false);
@@ -64,7 +64,7 @@ const JourneyPage = () => {
   return (
     <div onClick={handleAudio}>
       <Navbar />
-      <h1 class="fw-bold text-center mb-4 fs-2">OUR SPECIAL MOMENTS </h1>
+      <h1 className="fw-bold text-center mb-4 fs-2">OUR SPECIAL MOMENTS </h1>
       <h5 className={styles.musicInfo}>(Click to Listen Music)</h5>
       {/* 2022 Section */}
       <Travel

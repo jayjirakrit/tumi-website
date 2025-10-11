@@ -28,22 +28,22 @@ const AboutPage = () => {
 
       {/* Mon Section */}
       <div
-        class="bam-section d-flex flex-column justify-content-center align-items-center"
+        className="bam-section d-flex flex-column justify-content-center align-items-center"
         style={jimBg}
       >
-        <div class="d-flex justify-content-center align-items-center">
-          <div class="box-container m-5">
-            <h1 class="d-flex fw-bold mb-6">Tumi</h1>
-            <p1 class="d-flex text-start fs-5">
+        <div className="d-flex justify-content-center align-items-center">
+          <div className="box-container m-5">
+            <h1 className="d-flex fw-bold mb-6">Tumi</h1>
+            <p1 className="d-flex text-start fs-5">
               Love snack, tiktok, cold weather, <br />
               watch netflix, traveling , play with jimmy
             </p1>
           </div>
 
-          <div class="box-container m-5">
+          <div className="box-container m-5">
             <img
               src={MonImg}
-              class="mon-img personal-img ml-5 rounded"
+              className="mon-img personal-img ml-5 rounded"
               alt="Mon"
             />
           </div>
@@ -52,22 +52,22 @@ const AboutPage = () => {
       
       {/* Jimmy Section */}
       <div
-        class="jimmy-section d-flex flex-column justify-content-center align-items-center"
+        className="jimmy-section d-flex flex-column justify-content-center align-items-center"
         style={monBg}
       >
-        <div class="d-flex justify-content-center align-items-center">
-          <div class="box-container m-5">
-            <h1 class="d-flex fw-bold mb-6">Jimmy</h1>
-            <p1 class="d-flex text-start fs-5">
+        <div className="d-flex justify-content-center align-items-center">
+          <div className="box-container m-5">
+            <h1 className="d-flex fw-bold mb-6">Jimmy</h1>
+            <p1 className="d-flex text-start fs-5">
               Love dairy product, computer programming, board game, <br />
               table tennis, read a book, play with tumi
             </p1>
           </div>
 
-          <div class="box-container m-5">
+          <div className="box-container m-5">
             <img
               src={JimImg}
-              class="jim-img personal-img ml-5 rounded"
+              className="jim-img personal-img ml-5 rounded"
               alt="Jim"
             />
           </div>
