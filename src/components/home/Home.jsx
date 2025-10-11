@@ -66,7 +66,7 @@ const HomePage = () => {
               Relationship
             </h1>
             <p class="fs-3 mb-1">
-              <span class="relationship"></span>25 years
+              <span class="relationship"></span>5 years
             </p>
           </div>
           <div class="count-box d-flex flex-column justify-content-center rounded-3">

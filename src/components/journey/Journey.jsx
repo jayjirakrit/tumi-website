@@ -1,5 +1,5 @@
-import React from "react";
-import "./Journey.css";
+import React, { useEffect, useMemo } from "react";
+import styles from "./Journey.module.css";
 import Navbar from "../ui/Navbar";
 import Footer from "../ui/Footer";
 import Travel from "../ui/Travel";
@@ -20,16 +20,52 @@ import TwImg3 from "../../img/journey/TW_2024_3.jpeg";
 import HkImg1 from "../../img/journey/HK_2024_1.jpeg";
 import HkImg2 from "../../img/journey/HK_2024_2.jpeg";
 import HkImg3 from "../../img/journey/HK_2024_3.jpeg";
+import Tokyo25Img1 from "../../img/journey/JP_2025_1.jpg";
+import Tokyo25Img2 from "../../img/journey/JP_2025_2.jpg";
+import Tokyo25Img3 from "../../img/journey/JP_2025_3.jpg";
+import Hk25Img1 from "../../img/journey/HK_2025_1.jpg";
+import Hk25Img2 from "../../img/journey/HK_2025_2.jpg";
+import Hk25Img3 from "../../img/journey/HK_2025_3.jpg";
+import Music from "../../audio/cinnamon_music.mp3";
 
 const JourneyPage = () => {
+  const [isPlaying, setIsPlaying] = React.useState(false);
+  const audio = useMemo(() => new Audio(Music), []);
+
+  useEffect(() => {
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isPlaying) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }, [isPlaying]);
+
+  const handleAudio = () => setIsPlaying((previous) => !previous);
+
   const imagesTokyo = [TokyoImg1, TokyoImg2, TokyoImg3, TokyoImg4];
   const imagesKorea = [KoreaImg1, KoreaImg2, KoreaImg3, KoreaImg4];
   const imagesTWAndHK = [TwImg1, TwImg2, TwImg3, HkImg1, HkImg2, HkImg3];
+  const imagesJPAndHK = [
+    Tokyo25Img1,
+    Tokyo25Img2,
+    Tokyo25Img3,
+    Hk25Img1,
+    Hk25Img2,
+    Hk25Img3,
+  ];
 
   return (
-    <div>
+    <div onClick={handleAudio}>
       <Navbar />
-      <h1 class="fw-bold text-center mb-5 fs-2">OUR SPECIAL MOMENTS</h1>
+      <h1 class="fw-bold text-center mb-4 fs-2">OUR SPECIAL MOMENTS </h1>
+      <h5 className={styles.musicInfo}>(Click to Listen Music)</h5>
       {/* 2022 Section */}
       <Travel
         year="2022"
@@ -47,16 +83,16 @@ const JourneyPage = () => {
       {/* 2024 Section */}
       <Travel
         year="2024"
-        title="We Come To Taiwan & HongKong"
+        title="We Come To Taiwan & Hong Kong"
         background={HongkongBg}
         images={imagesTWAndHK}
       />
       {/* 2025 Section */}
       <Travel
         year="2025"
-        title="We Come To Japan (Osaka)"
+        title="We Come To Japan (Osaka) & Hong Kong"
         background={TokyoBg}
-        images={imagesTokyo}
+        images={imagesJPAndHK}
       />
     </div>
   );

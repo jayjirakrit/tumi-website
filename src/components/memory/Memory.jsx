@@ -7,27 +7,31 @@ import Modal from "../ui/ModalEvent";
 import { useState } from "react";
 import BdImg from "../../img/memory/cake.png";
 import ValImg from "../../img/memory/hearts.png";
-
+import BirthDay4th from "../card/bd23/BirthdayCard4";
 
 const card5Valen = () => {
   return (
     <div class="card-inside">
-    <div class="text-one">Happy Valentine Day !!<br /></div>
-    <div class="text-two">
-      I'm so glad to be with you another year, still excited and heart race
-      every time. Wish I could celebrate with you until we old. As always,
-      Love you more than yesterday, but less than tommorow. Love you my king &#128150; &#128150;. 
+      <div class="text-one">
+        Happy Valentine Day !!
+        <br />
+      </div>
+      <div class="text-two">
+        I'm so glad to be with you another year, still excited and heart race
+        every time. Wish I could celebrate with you until we old. As always,
+        Love you more than yesterday, but less than tommorow. Love you my king
+        &#128150; &#128150;.
+      </div>
+      <div class="heart"></div>
+      <div class="smile"></div>
+      <div class="eyes"></div>
     </div>
-    <div class="heart"></div>
-    <div class="smile"></div>
-    <div class="eyes"></div>
-  </div>
   );
 };
 
 const card4Valen = () => {
   return (
-    <div class="cardInside">
+    <div class="cardInside-memory">
       <h3 class="back">Happy 4th Valentine's Day!</h3>
       <p>Love You Tumi!!, My Beloved Kid</p>
       <p>
@@ -40,24 +44,7 @@ const card4Valen = () => {
 };
 
 const card4Ann = () => {
-  return (
-    <div class="cardInside">
-      <h3 class="back">
-        HAPPY BIRTHDAY
-        <br />
-        HAPPY ANNIVERSARY
-      </h3>
-      <p>Dear King Bu, </p>
-      <p>
-        Happy Birthday and Happy our 4th Anniersary!! Always excited and nervous
-        everytime to celebrate with you. It been another year that we have
-        overcame a lots of important thing together which for sure it's our
-        tough year. However, we just made it, and I just think that I'm so lucky
-        that I met you and having you stay by myside. Love you so much Bu Bu,
-        you are the only one, my good kid.
-      </p>
-    </div>
-  );
+  return <BirthDay4th />;
 };
 
 const card5Ann = () => {
@@ -90,12 +77,12 @@ const card6Valen = () => {
       </h3>
       <br />
       <h5 class="text-2xl text-gray-900 mb-4 ml-20 mr-20">
-        I love you so much na, really excited to show this website to you.
-        I hope you like it. I build this website to remind our good memorable and journey
-        along the way. Time flies so fast and this is our 6th tim valentine celebration laew na.
-        Let keep counting and celebrate na Bu. 
-        Staying, playing, being with you is the most fun for me.
-        Being good kid duay na while I'm aboard. Love you Bu Bu
+        I love you so much na, really excited to show this website to you. I
+        hope you like it. I build this website to remind our good memorable and
+        journey along the way. Time flies so fast and this is our 6th tim
+        valentine celebration laew na. Let keep counting and celebrate na Bu.
+        Staying, playing, being with you is the most fun for me. Being good kid
+        duay na while I'm aboard. Love you Bu Bu
         <span class="text-red-900"> &#10084; &#10084;</span>
       </h5>
     </div>
@@ -103,6 +90,10 @@ const card6Valen = () => {
 };
 
 const MemoryPage = () => {
+  const [activeCardId, setActiveCardId] = useState(null);
+  const handleOpenModal = (id) => setActiveCardId(id);
+  const handleCloseModal = () => setActiveCardId(null);
+
   const eventDatas = [
     [
       {
@@ -142,12 +133,15 @@ const MemoryPage = () => {
         cardBody: card6Valen,
         cardImage: ValImg,
       },
+      {
+        id: 6,
+        cardTitle: "Anniversary 2025",
+        cardText: "Tumi Dek Dee",
+        cardBody: card6Valen,
+        cardImage: BdImg,
+      },
     ],
   ];
-
-  const [activeCardId, setActiveCardId] = useState(null);
-  const handleOpenModal = (id) => setActiveCardId(id);
-  const handleCloseModal = () => setActiveCardId(null);
 
   return (
     <div>

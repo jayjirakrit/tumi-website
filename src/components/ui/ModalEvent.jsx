@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 
 function ModalEvent(props) {
   return (
-    <Modal show={props.show} onHide={props.handleClose}>
+    <Modal show={props.show} onHide={props.handleClose} size="lg">
       <Modal.Header className="d-flex justify-content-center">
         <Modal.Title>{props.title}</Modal.Title>
       </Modal.Header>
