@@ -172,7 +172,7 @@ const MemoryPage = () => {
       <div className="memory-page">
         {/* Render All Cards */}
         {eventDatas.map((datas) => (
-          <ul className="card-section justify-content-center">
+          <ul className="card-section d-flex justify-content-center">
             {datas.map((data) => (
               <li>
                 <Card

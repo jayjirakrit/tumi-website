@@ -3,7 +3,8 @@
 }
 
 .nav-cust {
-  margin-right: 120px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 body a {
@@ -13,9 +14,22 @@ body a {
 .nav-item-cust:hover {
   text-decoration: underline;
   color: grey;
-
 }
 
 .cinmon-img {
   height: 50px;
+}
+
+@media (max-width: 720px) {
+  .nav-cust {
+    align-items: end;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-cust {
+    align-items: end;
+    height: 100vh;
+  }
 }

@@ -14,7 +14,7 @@
 }
 
 .welcome-section {
-  height: 600px;
+  min-height: 100vh;
   background-color: #bbd2fb;
 }
 
@@ -25,7 +25,7 @@
 /* Intro Section */
 
 .intro-section {
-  height: 600px;
+  min-height: 100vh;
 }
 
 .intro-section ul {
@@ -35,7 +35,6 @@
 .intro {
   list-style-type: none;
   display: flex;
-  gap: 10px;
 }
 
 .intro li {
@@ -82,17 +81,13 @@
 
 /* Record Section */
 
-.travel-section {
-  height: 500px;
+.record-section {
+  min-height: 100vh;
 }
 
 .record-bg {
   /* background-color: #fff2c2; */
   border-top: 1px solid rgb(108, 117, 125);
-}
-
-.count-container {
-  height: 200px;
 }
 
 .count-info {
@@ -101,7 +96,20 @@
 
 .count-box {
   background-color: #ff7ea4;
-
   width: 250px;
-  height: 220px;
+  height: 200px;
+}
+
+@media (max-width: 720px) {
+  .count-box {
+    width: 200px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .count-box {
+    width: 160px;
+    height: 128px;
+  }
 }

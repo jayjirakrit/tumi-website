@@ -1,12 +1,11 @@
 body div.memory-page {
   background-color: #eee;
-  min-height: 90vh;
+  min-height: 100vh;
   padding-bottom: 3rem;
 }
 
 .card-section {
   list-style-type: none;
-  display: flex;
 }
 
 .card-section li {

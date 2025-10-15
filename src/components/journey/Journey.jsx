@@ -137,7 +137,7 @@ const JourneyPage = () => {
             }`}
             ref={refCallback}
           >
-            <React.Suspense key={travel.year} fallback={<div>Loading...</div>}>
+            <React.Suspense key={travel.year} fallback={<div></div>}>
               <Travel
                 year={travel.year}
                 title={travel.title}

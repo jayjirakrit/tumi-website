@@ -6,9 +6,6 @@
   height: 24rem;
 }
 
-.box-container {
-  width: 600px;
-}
 
 img.personal-img {
   border: 8px solid white;
@@ -18,13 +15,12 @@ img.personal-img {
 }
 
 .jimmy-section {
-  height: 600px;
+  min-height: 100vh;
   background-color: rgb(255, 203, 203);
 }
 
 .bam-section {
   color: white;
-  height: 600px;
+  min-height: 100vh;
   background-color: rgb(192, 214, 232);
-
 }

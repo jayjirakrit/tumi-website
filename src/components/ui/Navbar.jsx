@@ -41,23 +41,23 @@ function NavbarUI() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav" className="justify-content-center">
-          <Nav className="nav-cust">
-            <Nav.Link className="me-4">
+          <Nav className="w-md-75 w-100 nav-cust">
+            <Nav.Link className="">
               <Link to="/">
                 <span className="fw-bold nav-item-cust">Home</span>
               </Link>
             </Nav.Link>
-            <Nav.Link className="me-4">
+            <Nav.Link className="">
               <Link to="/journey">
                 <span className="fw-bold nav-item-cust">Journey</span>
               </Link>
             </Nav.Link>
-            <Nav.Link className="me-4">
+            <Nav.Link className="">
               <Link to="/about">
                 <span className="fw-bold nav-item-cust">About</span>
               </Link>
             </Nav.Link>
-            <Nav.Link className="me-4">
+            <Nav.Link className="">
               <Link to="/other">
                 <span className="fw-bold nav-item-cust">Other</span>
               </Link>

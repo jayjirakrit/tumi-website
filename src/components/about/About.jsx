@@ -25,22 +25,22 @@ const AboutPage = () => {
   return (
     <div>
       <Navbar />
-
       {/* Mon Section */}
       <div
-        className="bam-section d-flex flex-column justify-content-center align-items-center"
+        className="bam-section d-flex flex-column flex-md-row align-items-center"
         style={jimBg}
       >
-        <div className="d-flex justify-content-center align-items-center">
-          <div className="box-container m-5">
-            <h1 className="d-flex fw-bold mb-6">Tumi</h1>
-            <p1 className="d-flex text-start fs-5">
-              Love snack, tiktok, cold weather, <br />
-              watch netflix, traveling , play with jimmy
+        <div className="d-flex flex-column w-100 text-center flex-md-row justify-content-between align-items-center">
+          <div className="w-100 w-md-50 m-5">
+            <h1 className="text-center text-md-start fw-bold mb-6">Tumi</h1>
+            <p1 className="text-center text-md-start d-md-flex fs-5">
+              Love snack, tiktok, cold weather, watch netflix, traveling , play
+              <br />
+              with jimmy
             </p1>
           </div>
 
-          <div className="box-container m-5">
+          <div className="w-100 w-md-50 m-5">
             <img
               src={MonImg}
               className="mon-img personal-img ml-5 rounded"
@@ -49,22 +49,22 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Jimmy Section */}
       <div
-        className="jimmy-section d-flex flex-column justify-content-center align-items-center"
+        className="jimmy-section d-flex flex-column flex-md-row align-items-center"
         style={monBg}
       >
-        <div className="d-flex justify-content-center align-items-center">
-          <div className="box-container m-5">
-            <h1 className="d-flex fw-bold mb-6">Jimmy</h1>
-            <p1 className="d-flex text-start fs-5">
+        <div className="d-flex flex-column w-100 text-center flex-md-row justify-content-between align-items-center">
+          <div className="w-100 w-md-50 m-5">
+            <h1 className="text-center text-md-start fw-bold mb-6">Jimmy</h1>
+            <p1 className="text-center text-md-start d-md-flex fs-5">
               Love dairy product, computer programming, board game, <br />
               table tennis, read a book, play with tumi
             </p1>
           </div>
 
-          <div className="box-container m-5">
+          <div className="w-100 w-md-50 m-5">
             <img
               src={JimImg}
               className="jim-img personal-img ml-5 rounded"
