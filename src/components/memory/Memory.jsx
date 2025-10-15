@@ -44,11 +44,11 @@ const card4Valen = () => {
   );
 };
 
-const card4Ann = () => {
+const card4Bd = () => {
   return <BirthDay4th />;
 };
 
-const card5Ann = () => {
+const card5Bd = () => {
   return (
     <div className="flex flex-col justify-center items-center h-96 px-6">
       <h1 className="text-4xl font-bold text-gray-900 mt-8 mb-4">
@@ -63,8 +63,8 @@ const card5Ann = () => {
         this is another best year for you and us. Wish your life happy, your job
         easy, and have a good health. Let continue having precious time and
         collecting more memory together. Love you so much
-        <span className="text-red-900">&#10084; &#10084;</span>, love you more than
-        yesterday, but less than tomorrow.
+        <span className="text-red-900">&#10084; &#10084;</span>, love you more
+        than yesterday, but less than tomorrow.
       </h5>
     </div>
   );
@@ -90,6 +90,27 @@ const card6Valen = () => {
   );
 };
 
+const card6Bd = () => {
+  return (
+    <div className="flex flex-col justify-center items-center h-96 px-6">
+      <h3 className="text-4xl font-bold text-gray-900 mt-8 mb-4">
+        Happy Birthday and Our 6th Anniversary!!
+      </h3>
+      <br />
+      <h5 className="text-2xl text-gray-900 mb-4 ml-20 mr-20">
+        Another amazing year has been passed. We are doing very well mak loey
+        with our long distance relation but still happy and lovely with each
+        other. Please wait for me a little bit na. I will come meet you soon and
+        often as promise na ja. Thank you for everything and being my only
+        one. Again I love you so much and never get tried to baby sitting and
+        taking care of you. My love is more than yesterday, but less than
+        tommorow. From Jimmy, Mon's Daddy Jub Jub.
+        <span className="text-red-900"> &#10084; &#10084;</span>
+      </h5>
+    </div>
+  );
+};
+
 const MemoryPage = () => {
   const [activeCardId, setActiveCardId] = useState(null);
   const handleOpenModal = (id) => setActiveCardId(id);
@@ -108,7 +129,7 @@ const MemoryPage = () => {
         id: 2,
         cardTitle: "Anniversary 2023",
         cardText: "Tumi Dek Dee",
-        cardBody: card4Ann,
+        cardBody: card4Bd,
         cardImage: BdImg,
       },
       {
@@ -124,7 +145,7 @@ const MemoryPage = () => {
         id: 4,
         cardTitle: "Anniversary 2024",
         cardText: "Tumi Dek Dee",
-        cardBody: card5Ann,
+        cardBody: card5Bd,
         cardImage: BdImg,
       },
       {
@@ -138,7 +159,7 @@ const MemoryPage = () => {
         id: 6,
         cardTitle: "Anniversary 2025",
         cardText: "Tumi Dek Dee",
-        cardBody: card6Valen,
+        cardBody: card6Bd,
         cardImage: BdImg,
       },
     ],

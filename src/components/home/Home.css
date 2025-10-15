@@ -2,8 +2,24 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.btn-mon {
+  width: 200px;
+  height: 45px;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+.btn-mon:hover {
+  background-color: black;
+  color: white;
+}
+
 .welcome-section {
   height: 600px;
+  background-color: #bbd2fb;
+}
+
+.title-mon {
+  color: #015cac;
 }
 
 /* Intro Section */
@@ -64,20 +80,28 @@
   transform: rotateY(180deg);
 }
 
+/* Record Section */
+
 .travel-section {
   height: 500px;
 }
 
 .record-bg {
-  background-color: #FFF2C2;
+  /* background-color: #fff2c2; */
+  border-top: 1px solid rgb(108, 117, 125);
 }
 
 .count-container {
   height: 200px;
 }
 
+.count-info {
+  color: #d4f6fd;
+}
+
 .count-box {
-  background-color: white;
+  background-color: #ff7ea4;
+
   width: 250px;
   height: 220px;
 }

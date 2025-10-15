@@ -1,99 +1,153 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import styles from "./Journey.module.css";
 import Navbar from "../ui/Navbar";
-import TokyoBg from "../../img/JP_Flag.png";
-import KoreaBg from "../../img/KOR_Flag.png";
-import HongkongBg from "../../img/HK_Flag.png";
-import TokyoImg1 from "../../img/journey/JP_2022_1.jpeg";
-import TokyoImg2 from "../../img/journey/JP_2022_2.jpeg";
-import TokyoImg3 from "../../img/journey/JP_2022_3.jpeg";
-import TokyoImg4 from "../../img/journey/JP_2022_4.jpeg";
-import KoreaImg1 from "../../img/journey/KOR_2023_1.jpeg";
-import KoreaImg2 from "../../img/journey/KOR_2023_2.jpeg";
-import KoreaImg3 from "../../img/journey/KOR_2023_3.jpeg";
-import KoreaImg4 from "../../img/journey/KOR_2023_4.jpeg";
-import TwImg1 from "../../img/journey/TW_2024_1.jpeg";
-import TwImg2 from "../../img/journey/TW_2024_2.jpeg";
-import TwImg3 from "../../img/journey/TW_2024_3.jpeg";
-import HkImg1 from "../../img/journey/HK_2024_1.jpeg";
-import HkImg2 from "../../img/journey/HK_2024_2.jpeg";
-import HkImg3 from "../../img/journey/HK_2024_3.jpeg";
-import Tokyo25Img1 from "../../img/journey/JP_2025_1.jpg";
-import Tokyo25Img2 from "../../img/journey/JP_2025_2.jpg";
-import Tokyo25Img3 from "../../img/journey/JP_2025_3.jpg";
-import Hk25Img1 from "../../img/journey/HK_2025_1.jpg";
-import Hk25Img2 from "../../img/journey/HK_2025_2.jpg";
-import Hk25Img3 from "../../img/journey/HK_2025_3.jpg";
-import Music from "../../audio/cinnamon_music.mp3";
+import { useIntersection } from "../../hook/UseIntersection";
 
 const Travel = React.lazy(() => import("../ui/Travel"));
 
-const JourneyPage = () => {
-  const [isPlaying, setIsPlaying] = React.useState(false);
-  const audio = useMemo(() => new Audio(Music), []);
+// Image imports - Vite handles these as static URLs
+const IMAGES = {
+  2022: {
+    tokyo: [
+      new URL("../../img/journey/JP_2022_1.jpeg", import.meta.url).href,
+      new URL("../../img/journey/JP_2022_2.jpeg", import.meta.url).href,
+      new URL("../../img/journey/JP_2022_3.jpeg", import.meta.url).href,
+      new URL("../../img/journey/JP_2022_4.jpeg", import.meta.url).href,
+    ],
+  },
+  2023: {
+    korea: [
+      new URL("../../img/journey/KOR_2023_1.jpeg", import.meta.url).href,
+      new URL("../../img/journey/KOR_2023_2.jpeg", import.meta.url).href,
+      new URL("../../img/journey/KOR_2023_3.jpeg", import.meta.url).href,
+      new URL("../../img/journey/KOR_2023_4.jpeg", import.meta.url).href,
+    ],
+  },
+  2024: {
+    taiwan: [
+      new URL("../../img/journey/TW_2024_1.jpeg", import.meta.url).href,
+      new URL("../../img/journey/TW_2024_2.jpeg", import.meta.url).href,
+      new URL("../../img/journey/TW_2024_3.jpeg", import.meta.url).href,
+    ],
+    hongkong: [
+      new URL("../../img/journey/HK_2024_1.jpeg", import.meta.url).href,
+      new URL("../../img/journey/HK_2024_2.jpeg", import.meta.url).href,
+      new URL("../../img/journey/HK_2024_3.jpeg", import.meta.url).href,
+    ],
+  },
+  2025: {
+    japan: [
+      new URL("../../img/journey/JP_2025_1.jpg", import.meta.url).href,
+      new URL("../../img/journey/JP_2025_2.jpg", import.meta.url).href,
+      new URL("../../img/journey/JP_2025_3.jpg", import.meta.url).href,
+    ],
+    hongkong: [
+      new URL("../../img/journey/HK_2025_1.jpg", import.meta.url).href,
+      new URL("../../img/journey/HK_2025_2.jpg", import.meta.url).href,
+      new URL("../../img/journey/HK_2025_3.jpg", import.meta.url).href,
+    ],
+  },
+};
 
+// Background images
+const BACKGROUNDS = {
+  tokyo: new URL("../../img/JP_Flag.png", import.meta.url).href,
+  korea: new URL("../../img/KOR_Flag.png", import.meta.url).href,
+  hongkong: new URL("../../img/HK_Flag.png", import.meta.url).href,
+};
+
+// Travel data configuration
+const TRAVEL_DATA = [
+  {
+    year: "2022",
+    title: "We Come To Japan (Tokyo)",
+    background: BACKGROUNDS.tokyo,
+    images: [...IMAGES[2022].tokyo],
+  },
+  {
+    year: "2023",
+    title: "We Come To Korea",
+    background: BACKGROUNDS.korea,
+    images: [...IMAGES[2023].korea],
+  },
+  {
+    year: "2024",
+    title: "We Come To Taiwan & Hong Kong",
+    background: BACKGROUNDS.hongkong,
+    images: [...IMAGES[2024].taiwan, ...IMAGES[2024].hongkong],
+  },
+  {
+    year: "2025",
+    title: "We Come To Japan (Osaka) & Hong Kong",
+    background: BACKGROUNDS.tokyo,
+    images: [...IMAGES[2025].japan, ...IMAGES[2025].hongkong],
+  },
+];
+
+const JourneyPage = () => {
+  const sectionRefs = React.useRef([]);
+  const [visibilities, setVisibilities] = useState([]);
+
+  // Initialize visibilities state
   useEffect(() => {
+    setVisibilities(Array(TRAVEL_DATA.length).fill(false));
+  }, []);
+
+  // Observe travel section when visible
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = parseInt(entry.target.getAttribute("id"));
+          setVisibilities((prev) => {
+            const newVisibilities = [...prev];
+            newVisibilities[index] = entry.isIntersecting;
+            return newVisibilities;
+          });
+        }
+      });
+    });
+
+    sectionRefs.current.forEach((section) => {
+      observer.observe(section);
+    });
+
     return () => {
-      audio.pause();
-      audio.currentTime = 0;
+      observer.disconnect();
     };
   }, []);
 
-  useEffect(() => {
-    if (isPlaying) {
-      audio.play();
-    } else {
-      audio.pause();
+  const refCallback = (element) => {
+    if (element) {
+      sectionRefs.current.push(element);
     }
-  }, [isPlaying]);
-
-  const handleAudio = () => setIsPlaying((previous) => !previous);
-
-  const imagesTokyo = [TokyoImg1, TokyoImg2, TokyoImg3, TokyoImg4];
-  const imagesKorea = [KoreaImg1, KoreaImg2, KoreaImg3, KoreaImg4];
-  const imagesTWAndHK = [TwImg1, TwImg2, TwImg3, HkImg1, HkImg2, HkImg3];
-  const imagesJPAndHK = [
-    Tokyo25Img1,
-    Tokyo25Img2,
-    Tokyo25Img3,
-    Hk25Img1,
-    Hk25Img2,
-    Hk25Img3,
-  ];
+  };
 
   return (
-    <div onClick={handleAudio}>
+    <div>
       <Navbar />
       <h1 className="fw-bold text-center mb-4 fs-2">OUR SPECIAL MOMENTS </h1>
-      <h5 className={styles.musicInfo}>(Click to Listen Music)</h5>
-      {/* 2022 Section */}
-      <Travel
-        year="2022"
-        title="We Come To Japan (Tokyo)"
-        background={TokyoBg}
-        images={imagesTokyo}
-      />
-      {/* 2023 Section */}
-      <Travel
-        year="2023"
-        title="We Come To Korea"
-        background={KoreaBg}
-        images={imagesKorea}
-      />
-      {/* 2024 Section */}
-      <Travel
-        year="2024"
-        title="We Come To Taiwan & Hong Kong"
-        background={HongkongBg}
-        images={imagesTWAndHK}
-      />
-      {/* 2025 Section */}
-      <Travel
-        year="2025"
-        title="We Come To Japan (Osaka) & Hong Kong"
-        background={TokyoBg}
-        images={imagesJPAndHK}
-      />
+      <div className={styles.content}>
+        {TRAVEL_DATA.map((travel, index) => (
+          <div
+            id={index}
+            key={index}
+            className={`${styles.section} ${
+              visibilities[index] ? styles.visible : ""
+            }`}
+            ref={refCallback}
+          >
+            <React.Suspense key={travel.year} fallback={<div>Loading...</div>}>
+              <Travel
+                year={travel.year}
+                title={travel.title}
+                background={travel.background}
+                images={travel.images}
+              />
+            </React.Suspense>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
