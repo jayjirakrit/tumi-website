@@ -2,3 +2,22 @@ body .mod-title {
   text-align: center;
   margin-left: 100px;
 }
+
+.typing-effect {
+  overflow: hidden;
+  border-right: 3px solid #333;
+  width: 0;
+  animation: 
+    typing 3s steps(15, end) forwards, 
+    blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #333; }
+}

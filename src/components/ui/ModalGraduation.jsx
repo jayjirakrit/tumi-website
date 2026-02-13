@@ -1,15 +1,15 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import "./ModalEvent.css";
+import "./ModalGraduation.css";
 
-function ModalEvent(props) {
+function ModalGraduation(props) {
   return (
-    <Modal show={props.show} onHide={props.handleClose} size="lg">
+    <Modal show={props.show} onHide={props.handleClose} fullscreen={true} size="lg">
       <Modal.Header className="d-flex justify-content-center">
-        <Modal.Title>{props.title}</Modal.Title>
+        <Modal.Title className="fw-bold">{props.title}</Modal.Title>
       </Modal.Header>
-      <Modal.Body>{props.body()}</Modal.Body>
+      <Modal.Body className="custom-modal-content">{props.body()}</Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={props.onHide}>
           Close
@@ -19,4 +19,4 @@ function ModalEvent(props) {
   );
 }
 
-export default ModalEvent;
+export default ModalGraduation;

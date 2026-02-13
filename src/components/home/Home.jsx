@@ -1,26 +1,17 @@
 import React, { useEffect } from "react";
 import Navbar from "../ui/Navbar";
 import "./Home.css";
-import Background from "../../img/travel.jpg";
 import BamImg from "../../img/mon2.jpg";
 import JimImg from "../../img/jim1.jpg";
 import BamJimImg from "../../img/journey/TW_2024_2.jpeg";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const HomePage = () => {
-  const myStyle = {
-    backgroundImage: `url(${Background})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-  };
   return (
     <div>
       <Navbar />
       {/* Welcome Section */}
-      <div
-        className="welcome-section d-flex flex-column flex-md-row justify-content-around align-items-center"
-        // style={myStyle}
-      >
+      <div className="welcome-section d-flex flex-column flex-md-row justify-content-around align-items-center">
         <div className="w-100 w-md-50">
           <h1 className="fw-bolder mb-4">Tumi Cinnamoroll</h1>
           <p className="m-4 mt-0 mb-0">
@@ -72,16 +63,31 @@ const HomePage = () => {
         </ul>
       </div>
 
+      {/* Why Like Mon Section */}
+      <div className="like-section d-flex flex-column record-bg">
+        <h1 className="fs-1 fw-bold mb-5 mt-5 title-mon">
+          Why I Like Mon
+        </h1>
+        <div className="d-flex flex-column flex-md-row justify-content-evenly align-items-center gap-5 gap-md-3 gap-lg-0 w-full text-white">
+          <ul className="d-flex flex-column align-items-center gap-5 floating-box">
+            <li className="like-box">She is my daughter, close friend, and lovely girl friend</li>
+            <li className="like-box">Cute like kid, but cool like adult</li>
+            <li className="like-box">Plenty of happiness & enjoyment, and little battle</li>
+            <li className="like-box">So glad so proud so delighted to have you in my journey</li>
+          </ul>
+        </div>
+      </div>
+
       {/* Record Section */}
       <div className="record-section d-flex flex-column justify-content-center record-bg">
         <h1 className="fs-1 fw-bold mb-5 mt-5 mt-md-0 title-mon">
           Record Counting
         </h1>
-        <div className="d-flex flex-column flex-md-row justify-content-evenly align-items-center gap-5 gap-md-3 gap-lg-0 w-full text-white">
+        <div className="d-flex flex-column flex-md-row justify-content-evenly align-items-center mt-5 gap-5 gap-md-3 gap-lg-0 w-full text-white">
           <div className="count-box d-flex flex-column justify-content-center rounded-3">
             <h1 className="fs-2 mb-3 text-center fw-bold">Countries</h1>
             <p className="fs-3 mb-1">
-              <span className="country">5</span>
+              <span className="country">6</span>
             </p>
           </div>
           <div className="count-box d-flex flex-column justify-content-center rounded-3 ">

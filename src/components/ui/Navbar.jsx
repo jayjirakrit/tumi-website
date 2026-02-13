@@ -37,7 +37,7 @@ function NavbarUI() {
     <Navbar expand="lg" className="nav-bar-layout py-4">
       <Container>
         <Navbar.Brand href="#home">
-          <img class="cinmon-img" src={CinmonImg} onClick={handleAudio} />
+          <img className="cinmon-img" src={CinmonImg} onClick={handleAudio} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav" className="justify-content-center">

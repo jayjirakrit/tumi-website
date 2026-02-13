@@ -30,18 +30,4 @@ export const useIntersection = (elements, rootMargin) => {
     };
   }, [threshold]);
 
-  //   const current = elements?.current;
-  //   const observer = new IntersectionObserver(
-  //     ([entry]) => {
-  //       setState[current](entry.isIntersecting);
-  //     },
-  //     { rootMargin }
-  //   );
-  //   current && observer?.observe(current);
-
-  //   // Clean up the observer on unmount
-  //   return () => current && observer.unobserve(current);
-  // }, []);
-
-  // return isVisible;
 };

@@ -1,0 +1,116 @@
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-item {
+  display: none;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.slider-item.active {
+  display: block;
+}
+
+.slider-item img {
+  max-width: 350px;
+  max-height: 400px;
+  border-radius: 5%;
+  border-color: white;
+  border: 10px solid white;
+  height: auto;
+}
+
+.slide-from-right {
+  animation-name: slideInRight;
+}
+
+.slide-from-left {
+  animation-name: slideInLeft;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slider-indicators {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 400px;
+  height: 20px;
+}
+
+.indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: solid 2px white;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.indicator.active {
+  background-color: white;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: white;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+}
+
+.arrow-left {
+  left: 5%;
+}
+
+.arrow-right {
+  right: 5%;
+}
+
+.arrow-left img {
+  margin-right: 10%;
+  max-width: 50px;
+}
+
+.arrow-right img {
+  margin-left: 10%;
+  max-width: 50px;
+}

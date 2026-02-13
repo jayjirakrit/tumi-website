@@ -17,7 +17,7 @@ const card5Valen = () => {
         Happy Valentine Day !!
         <br />
       </div>
-      <div className="text-two">
+      <div className="typing-effect text-two">
         I'm so glad to be with you another year, still excited and heart race
         every time. Wish I could celebrate with you until we old. As always,
         Love you more than yesterday, but less than tommorow. Love you my king
@@ -32,7 +32,7 @@ const card5Valen = () => {
 
 const card4Valen = () => {
   return (
-    <div className="cardInside-memory">
+    <div className="typing-effect cardInside-memory">
       <h3 className="back">Happy 4th Valentine's Day!</h3>
       <p>Love You Tumi!!, My Beloved Kid</p>
       <p>
@@ -55,7 +55,7 @@ const card5Bd = () => {
         Happy Birthday and Our 5th Anniversary!!
       </h1>
       <br />
-      <h5 className="text-2xl text-gray-900 mb-4 ml-20 mr-20">
+      <h5 className="typing-effect text-2xl text-gray-900 mb-4 ml-20 mr-20">
         I'm so glad that I have met you and we are still together. This is a big
         year for our as the first time having long distance , but somehow we
         will overcome it. Thank you for everything, there won't be me in this
@@ -77,7 +77,7 @@ const card6Valen = () => {
         Happy our 6th Valentine!!
       </h3>
       <br />
-      <h5 className="text-2xl text-gray-900 mb-4 ml-20 mr-20">
+      <h5 className="typing-effect text-2xl text-gray-900 mb-4 ml-20 mr-20">
         I love you so much na, really excited to show this website to you. I
         hope you like it. I build this website to remind our good memorable and
         journey along the way. Time flies so fast and this is our 6th tim
@@ -97,14 +97,34 @@ const card6Bd = () => {
         Happy Birthday and Our 6th Anniversary!!
       </h3>
       <br />
-      <h5 className="text-2xl text-gray-900 mb-4 ml-20 mr-20">
+      <h5 className="typing-effect text-2xl text-gray-900 mb-4 ml-20 mr-20">
         Another amazing year has been passed. We are doing very well mak loey
         with our long distance relation but still happy and lovely with each
         other. Please wait for me a little bit na. I will come meet you soon and
-        often as promise na ja. Thank you for everything and being my only
-        one. Again I love you so much and never get tried to baby sitting and
-        taking care of you. My love is more than yesterday, but less than
-        tommorow. From Jimmy, Mon's Daddy Jub Jub.
+        often as promise na ja. Thank you for everything and being my only one.
+        Again I love you so much and never get tried to baby sitting and taking
+        care of you. My love is more than yesterday, but less than tommorow.
+        From Jimmy, Mon's Daddy Jub Jub.
+        <span className="text-red-900"> &#10084; &#10084;</span>
+      </h5>
+    </div>
+  );
+};
+
+const card7Valen = () => {
+  return (
+    <div className="flex flex-col justify-center items-center h-96 px-6">
+      <h3 className="text-4xl font-bold text-gray-900 mt-8 mb-4">
+        Happy our 7th Valentine!!
+      </h3>
+      <br />
+      <h5 className="typing-effect text-2xl text-gray-900 mb-4 ml-20 mr-20">
+        I love you so much na, really excited to show this website to you. I
+        hope you like it. I build this website to remind our good memorable and
+        journey along the way. Time flies so fast and this is our 6th tim
+        valentine celebration laew na. Let keep counting and celebrate na Bu.
+        Staying, playing, being with you is the most fun for me. Being good kid
+        duay na while I'm aboard. Love you Bu Bu
         <span className="text-red-900"> &#10084; &#10084;</span>
       </h5>
     </div>
@@ -163,6 +183,15 @@ const MemoryPage = () => {
         cardImage: BdImg,
       },
     ],
+    [
+      {
+        id: 7,
+        cardTitle: "Valentine 2026",
+        cardText: "Tumi Dek Dee",
+        cardBody: card7Valen,
+        cardImage: ValImg,
+      },
+    ],
   ];
 
   return (
@@ -171,10 +200,13 @@ const MemoryPage = () => {
       {/* Card Section */}
       <div className="memory-page">
         {/* Render All Cards */}
-        {eventDatas.map((datas) => (
-          <ul className="card-section d-flex justify-content-center">
-            {datas.map((data) => (
-              <li>
+        {eventDatas.map((datas, outIndex) => (
+          <ul
+            key={outIndex}
+            className="card-section d-flex justify-content-center"
+          >
+            {datas.map((data, index) => (
+              <li key={index}>
                 <Card
                   title={data.cardTitle}
                   text={data.cardText}
@@ -189,8 +221,9 @@ const MemoryPage = () => {
       {/* Render All Modal respect to Card */}
       {eventDatas.map((datas) => (
         <>
-          {datas.map((data) => (
+          {datas.map((data, index) => (
             <Modal
+              key={index}
               title={data.cardTitle}
               body={data.cardBody}
               show={activeCardId === data.id}

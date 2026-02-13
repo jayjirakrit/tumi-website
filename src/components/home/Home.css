@@ -5,7 +5,9 @@
 .btn-mon {
   width: 200px;
   height: 45px;
-  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  transition:
+    background-color 0.4s ease-in-out,
+    color 0.4s ease-in-out;
 }
 
 .btn-mon:hover {
@@ -45,7 +47,7 @@
   height: 250px;
   width: 250px;
   border: 6px solid transparent;
-  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+  transition: all 0.7s ease-in-out; /* Smooth transition for hover effects */
 }
 
 .intro-item:hover img {
@@ -79,15 +81,47 @@
   transform: rotateY(180deg);
 }
 
-/* Record Section */
+/* Why I Like Section */
+.like-section {
+  min-height: 100vh;
+  background-color: #bbd2fb;
+}
 
+.like-box {
+  background-color: white;
+  width: 50vw;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.floating-box {
+  animation: floatSlow 2s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px); /* Moves up */
+  }
+  100% {
+    transform: translateY(0px); /* Returns down */
+  }
+}
+
+/* Record Section */
 .record-section {
   min-height: 100vh;
 }
 
 .record-bg {
-  /* background-color: #fff2c2; */
-  border-top: 1px solid rgb(108, 117, 125);
+  /* border-top: 1px solid rgb(108, 117, 125); */
 }
 
 .count-info {
@@ -98,9 +132,32 @@
   background-color: #ff7ea4;
   width: 250px;
   height: 200px;
+  transition: transform 0.3s ease;
+  transform: translateY(-10px);
+  /* animation: moveRightThenLeft 6s ease-in-out infinite; */
+}
+
+@keyframes moveRightThenLeft {
+  0%,
+  50%,
+  100% {
+    transform: translateY(-10px) translateX(0) rotate(0deg);
+  }
+  25% {
+    /* 1s: Peak of Right movement */
+    transform: translateY(-20px) translateX(30px) rotate(3deg);
+  }
+  75% {
+    /* 3s: Peak of Left movement */
+    transform: translateY(-20px) translateX(-30px) rotate(-3deg);
+  }
 }
 
 @media (max-width: 720px) {
+  .like-box {
+    font-size: medium;
+  }
+
   .count-box {
     width: 200px;
     height: 160px;
@@ -108,6 +165,10 @@
 }
 
 @media (max-width: 480px) {
+  .like-box {
+    font-size: small;
+  }
+
   .count-box {
     width: 160px;
     height: 128px;
