@@ -1,19 +1,19 @@
 .two-one-section {
-  height: 800px;
+  height: 100vh;
   background-color: rgb(192, 214, 232);
 }
 
 .two-two-section {
-  height: 800px;
+  height: 100vh;
   background-color: rgb(255, 203, 203);
 }
 
 .two-three-section {
-  height: 1400px;
+  height: calc(100vh + 30rem);
 }
 
 .two-four-section {
-  height: 800px;
+  height: 100vh;
   background-color: rgb(192, 214, 232);
 }
 
@@ -28,7 +28,7 @@
 }
 
 .section-2024 {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .photo {
@@ -40,7 +40,7 @@
 
 .photo img {
   display: block;
-  width: 300px;
+  width: min(250px, calc(32vw - 60px));
   height: auto;
 }
 

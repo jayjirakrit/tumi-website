@@ -6,6 +6,13 @@ import JimImg from "../../img/jim1.jpg";
 import BamJimImg from "../../img/journey/TW_2024_2.jpeg";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
+const likeContents = [
+  "She is my daughter, close friend, and lovely girl friend",
+  "Cute like kid, but cool like adult",
+  "Plenty of happiness & enjoyment, and little battle",
+  "So glad so proud so delighted to have you in my journey",
+];
+
 const HomePage = () => {
   return (
     <div>
@@ -65,15 +72,14 @@ const HomePage = () => {
 
       {/* Why Like Mon Section */}
       <div className="like-section d-flex flex-column record-bg">
-        <h1 className="fs-1 fw-bold mb-5 mt-5 title-mon">
-          Why I Like Mon
-        </h1>
+        <h1 className="fs-1 fw-bold mb-5 mt-5 title-mon">Why I Like Mon</h1>
         <div className="d-flex flex-column flex-md-row justify-content-evenly align-items-center gap-5 gap-md-3 gap-lg-0 w-full text-white">
           <ul className="d-flex flex-column align-items-center gap-5 floating-box">
-            <li className="like-box">She is my daughter, close friend, and lovely girl friend</li>
-            <li className="like-box">Cute like kid, but cool like adult</li>
-            <li className="like-box">Plenty of happiness & enjoyment, and little battle</li>
-            <li className="like-box">So glad so proud so delighted to have you in my journey</li>
+            {likeContents.map((content, index) => (
+              <li key={index} className="like-box">
+                {content}
+              </li>
+            ))}
           </ul>
         </div>
       </div>

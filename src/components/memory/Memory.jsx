@@ -119,118 +119,102 @@ const card7Valen = () => {
       </h3>
       <br />
       <h5 className="typing-effect text-2xl text-gray-900 mb-4 ml-20 mr-20">
-        I love you so much na, really excited to show this website to you. I
-        hope you like it. I build this website to remind our good memorable and
-        journey along the way. Time flies so fast and this is our 6th tim
-        valentine celebration laew na. Let keep counting and celebrate na Bu.
-        Staying, playing, being with you is the most fun for me. Being good kid
-        duay na while I'm aboard. Love you Bu Bu
+        Even we done this many time I still eager to show this website to you. 
+        I super love you na mon mon, you are the best thing that ever happen to me. 
+        You make my life more colorful and joyful. Awaiting me for a bit na
+        I shall go back and stay with you soon. This year will be a great year for us yeah yeah!!  
+        . Thing is much more fun when having you around. Thank you so much for everything tubi.
+        From your baby daddy, Your Jemy.
         <span className="text-red-900"> &#10084; &#10084;</span>
       </h5>
     </div>
   );
 };
 
+const eventDatas = [
+  {
+    id: 1,
+    cardTitle: "Valentine 2023",
+    cardText: "Tumi Dek Dee",
+    cardBody: card4Valen,
+    cardImage: ValImg,
+  },
+  {
+    id: 2,
+    cardTitle: "Anniversary 2023",
+    cardText: "Tumi Dek Dee",
+    cardBody: card4Bd,
+    cardImage: BdImg,
+  },
+  {
+    id: 3,
+    cardTitle: "Valentine 2024",
+    cardText: "Tumi Dek Dee",
+    cardBody: card5Valen,
+    cardImage: ValImg,
+  },
+  {
+    id: 4,
+    cardTitle: "Anniversary 2024",
+    cardText: "Tumi Dek Dee",
+    cardBody: card5Bd,
+    cardImage: BdImg,
+  },
+  {
+    id: 5,
+    cardTitle: "Valentine 2025",
+    cardText: "Tumi Dek Dee",
+    cardBody: card6Valen,
+    cardImage: ValImg,
+  },
+  {
+    id: 6,
+    cardTitle: "Anniversary 2025",
+    cardText: "Tumi Dek Dee",
+    cardBody: card6Bd,
+    cardImage: BdImg,
+  },
+  {
+    id: 7,
+    cardTitle: "Valentine 2026",
+    cardText: "Tumi Dek Dee",
+    cardBody: card7Valen,
+    cardImage: ValImg,
+  },
+];
+
 const MemoryPage = () => {
   const [activeCardId, setActiveCardId] = useState(null);
   const handleOpenModal = (id) => setActiveCardId(id);
   const handleCloseModal = () => setActiveCardId(null);
-
-  const eventDatas = [
-    [
-      {
-        id: 1,
-        cardTitle: "Valentine 2023",
-        cardText: "Tumi Dek Dee",
-        cardBody: card4Valen,
-        cardImage: ValImg,
-      },
-      {
-        id: 2,
-        cardTitle: "Anniversary 2023",
-        cardText: "Tumi Dek Dee",
-        cardBody: card4Bd,
-        cardImage: BdImg,
-      },
-      {
-        id: 3,
-        cardTitle: "Valentine 2024",
-        cardText: "Tumi Dek Dee",
-        cardBody: card5Valen,
-        cardImage: ValImg,
-      },
-    ],
-    [
-      {
-        id: 4,
-        cardTitle: "Anniversary 2024",
-        cardText: "Tumi Dek Dee",
-        cardBody: card5Bd,
-        cardImage: BdImg,
-      },
-      {
-        id: 5,
-        cardTitle: "Valentine 2025",
-        cardText: "Tumi Dek Dee",
-        cardBody: card6Valen,
-        cardImage: ValImg,
-      },
-      {
-        id: 6,
-        cardTitle: "Anniversary 2025",
-        cardText: "Tumi Dek Dee",
-        cardBody: card6Bd,
-        cardImage: BdImg,
-      },
-    ],
-    [
-      {
-        id: 7,
-        cardTitle: "Valentine 2026",
-        cardText: "Tumi Dek Dee",
-        cardBody: card7Valen,
-        cardImage: ValImg,
-      },
-    ],
-  ];
-
   return (
     <div>
       <Navbar />
       {/* Card Section */}
       <div className="memory-page">
         {/* Render All Cards */}
-        {eventDatas.map((datas, outIndex) => (
-          <ul
-            key={outIndex}
-            className="card-section d-flex justify-content-center"
-          >
-            {datas.map((data, index) => (
-              <li key={index}>
-                <Card
-                  title={data.cardTitle}
-                  text={data.cardText}
-                  image={data.cardImage}
-                  onButtonClick={() => handleOpenModal(data.id)}
-                />
-              </li>
-            ))}
-          </ul>
-        ))}
+        <ul className="card-section">
+          {eventDatas.map((data, index) => (
+            <li key={index}>
+              <Card
+                title={data.cardTitle}
+                text={data.cardText}
+                image={data.cardImage}
+                onButtonClick={() => handleOpenModal(data.id)}
+              />
+            </li>
+          ))}
+        </ul>
       </div>
       {/* Render All Modal respect to Card */}
-      {eventDatas.map((datas) => (
-        <>
-          {datas.map((data, index) => (
-            <Modal
-              key={index}
-              title={data.cardTitle}
-              body={data.cardBody}
-              show={activeCardId === data.id}
-              onHide={handleCloseModal}
-            />
-          ))}
-        </>
+      {eventDatas.map((data, index) => (
+        <Modal
+          key={index}
+          title={data.cardTitle}
+          body={data.cardBody}
+          show={activeCardId === data.id}
+          onHide={handleCloseModal}
+        />
       ))}
       {/* <Footer /> */}
       <Footer />

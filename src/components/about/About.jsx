@@ -7,6 +7,7 @@ import JimImg from "../../img/jim1.jpg";
 import MonImg from "../../img/mon1.jpg";
 import ModalGraduation from "../ui/ModalGraduation";
 import ImageSlider from "../ui/ImageSlider";
+import { monGradImgs, jimGradImgs } from "./GradData";
 
 const AboutPage = () => {
   const [activeModalId, setActiveModalId] = useState(null);
@@ -105,7 +106,7 @@ const AboutPage = () => {
                 Graduated from King College London University in 2025 with a
                 Master's degree in Marketing.
               </p>
-              <ImageSlider />
+              <ImageSlider images={monGradImgs} />
             </div>
           </div>
         )}
@@ -121,7 +122,7 @@ const AboutPage = () => {
                 Graduated from The University of Hong Kong in 2025 with a
                 Master's degree in Computer Science.
               </p>
-              <ImageSlider />
+              <ImageSlider images={jimGradImgs} />
             </div>
           </div>
         )}
