@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import Navbar from "../ui/Navbar";
 import "./About.css";
 import JimBg from "../../img/Cinnamoroll_bg.png";
-import MonBg from "../../img/FMCG_BG.jpg";
+import MonBg from "../../img/FMCG_BG.png";
 import JimImg from "../../img/jim1.jpg";
 import MonImg from "../../img/mon1.jpg";
 import ModalGraduation from "../ui/ModalGraduation";
 import ImageSlider from "../ui/ImageSlider";
-import { monGradImgs, jimGradImgs } from "./GradData";
+import { monGradImgs, jimGradImgs } from "../../data/GradData";
 
 const AboutPage = () => {
   const [activeModalId, setActiveModalId] = useState(null);

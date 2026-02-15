@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import styles from "./Journey.module.css";
 import Navbar from "../ui/Navbar";
-import { TRAVEL_DATA } from "./JourneyData";
+import { TRAVEL_DATA } from "../../data/JourneyData";
 
 const Travel = React.lazy(() => import("../ui/Travel"));
 
