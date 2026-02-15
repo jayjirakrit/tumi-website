@@ -83,6 +83,7 @@ const AboutPage = () => {
                 src={JimImg}
                 className="jim-img personal-img ml-5 mb-4 rounded"
                 alt="Jim"
+                loading="lazy"
               />
               <button
                 className="btn-mon"

@@ -51,7 +51,7 @@ const ImageSlider = (props) => {
         ))}
       </div>
       <div className="arrow arrow-right" onClick={handleNext}>
-        <img src={ArrowRight} alt="Right Arrow" />
+        <img src={ArrowRight} loading="lazy" alt="Right Arrow" />
       </div>
     </>
   );

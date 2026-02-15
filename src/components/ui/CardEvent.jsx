@@ -8,7 +8,7 @@ function CardEvent(props) {
     <Card className="c-layout">
       <Card.Body>
         <Card.Title>
-          <img className="c-image" src={props.image} alt=""></img>
+          <img className="c-image" loading="lazy" src={props.image} alt=""></img>
         </Card.Title>
         <Card.Title className="c-title">
           <span>{props.title}</span>

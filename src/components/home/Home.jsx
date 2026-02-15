@@ -47,13 +47,13 @@ const HomePage = () => {
         <ul className="intro d-flex flex-column flex-md-row justify-content-evenly align-items-center">
           <li>
             <div className="intro-item d-flex flex-column justify-content-center">
-              <img src={BamImg} className="rounded img-thumbnail" alt="Mon" />
+              <img src={BamImg} className="rounded img-thumbnail" loading="lazy" alt="Mon" />
               <span className="mt-md-3 fw-bold fs-4">Mon</span>
             </div>
           </li>
           <li>
             <div className="intro-item d-flex flex-column justify-content-center">
-              <img src={JimImg} className="rounded img-thumbnail" alt="Jim" />
+              <img src={JimImg} className="rounded img-thumbnail" loading="lazy" alt="Jim" />
               <span className="mt-md-3 fw-bold fs-4">Jimmy</span>
             </div>
           </li>
