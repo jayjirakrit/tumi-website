@@ -47,6 +47,11 @@ export const IMAGES = {
       new URL("../img/journey/UK_2026_3.jpeg", import.meta.url).href,
       new URL("../img/journey/UK_2026_4.jpg", import.meta.url).href,
     ],
+    australia: [
+      new URL("../img/journey/AUS_2026_1.jpg", import.meta.url).href,
+      new URL("../img/journey/AUS_2026_2.jpg", import.meta.url).href,
+      new URL("../img/journey/AUS_2026_3.jpg", import.meta.url).href,
+    ],
   },
 };
 
@@ -56,6 +61,7 @@ export const BACKGROUNDS = {
   korea: new URL("../img/KOR_Flag.png", import.meta.url).href,
   hongkong: new URL("../img/HK_Flag.png", import.meta.url).href,
   england: new URL("../img/UK_Flag.png", import.meta.url).href,
+  australia: new URL("../img/AUS_Flag.png", import.meta.url).href,
 };
 
 // Travel data configuration
@@ -89,5 +95,11 @@ export const TRAVEL_DATA = [
     title: "We Come To England",
     background: BACKGROUNDS.england,
     images: [...IMAGES[2026].england],
+  },
+  {
+    year: "2026",
+    title: "We Come To Australia",
+    background: BACKGROUNDS.australia,
+    images: [...IMAGES[2026].australia],
   },
 ];
