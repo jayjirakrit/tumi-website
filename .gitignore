@@ -23,3 +23,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# per-developer Claude / Spec-Kit state
+.claude/settings.local.json
+.specify/feature.json
+.specify/.workflow-install.lock

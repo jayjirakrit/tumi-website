@@ -1,0 +1,18 @@
+{
+  "profile": "blank",
+  "requireContracts": false,
+  "commitTags": ["ADD", "IMP", "DOCS"],
+  "protected": [],
+  "areas": [
+    {
+      "id": "frontend",
+      "root": ".",
+      "role": "frontend",
+      "tag": "FE",
+      "protected": [],
+      "verify": "browser walkthrough",
+      "gates": ["npm run build"]
+    }
+  ],
+  "frameworkVersion": "0.1.0"
+}
