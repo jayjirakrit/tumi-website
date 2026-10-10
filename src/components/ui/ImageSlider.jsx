@@ -28,7 +28,7 @@ const ImageSlider = (props) => {
 
   return (
     <>
-      <div className="arrow arrow-left" onClick={handlePrev}>
+      <div className="arrow arrow-left z-3" onClick={handlePrev}>
         <img src={ArrowLeft} alt="Left Arrow" />
       </div>
       <div className="slider-container">
@@ -50,8 +50,8 @@ const ImageSlider = (props) => {
           ></span>
         ))}
       </div>
-      <div className="arrow arrow-right" onClick={handleNext}>
-        <img src={ArrowRight} loading="lazy" alt="Right Arrow" />
+      <div className="arrow arrow-right z-3" onClick={handleNext}>
+        <img src={ArrowRight} alt="Right Arrow" />
       </div>
     </>
   );

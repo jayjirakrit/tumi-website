@@ -62,8 +62,16 @@ function NavbarUI() {
                 <span className="fw-bold nav-item-cust">Other</span>
               </Link>
             </Nav.Link>
+            <Nav.Link className="">
+              <Link to="/game">
+                <span className="fw-bold nav-item-cust">Game</span>
+              </Link>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        <Navbar.Brand href="#home">
+          <img className="cinmon-img" src={CinmonImg} onClick={handleAudio} />
+        </Navbar.Brand>
       </Container>
     </Navbar>
   );
