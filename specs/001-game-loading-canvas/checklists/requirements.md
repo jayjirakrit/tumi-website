@@ -33,3 +33,4 @@
 
 - Validation iteration 1: only the clarification-marker item fails; the three markers are genuine scope/UX choices and are returned to the dispatcher.
 - Iteration 2: user answers applied (animated stroke-by-stroke, 1-2 s minimum display, keep subtle brown outline and pink cheeks). All items pass.
+- Iteration 3 (rework): spec updated to the user's later decisions: drawing lives inside the Cinnamon Board, starts after full page load, persists as a guide, visitor can draw over it, Clear removes only visitor strokes, header/tool bar stay usable. Full-screen loading, replacement by the game and minimum display time were retired; requirements renumbered FR-001 to FR-015 and success criteria SC-001 to SC-006. No clarification markers; all items pass.

@@ -93,3 +93,11 @@ If the tab is hidden at load, rAF is paused so the figure is never drawn, but `s
 5. Earlier minors #1, #2, #4 and the accepted items are unchanged.
 
 Critical: none. Major: none.
+
+## Documentation sync note
+
+After the final follow-up (T026-T027: the finished figure stays on the board as a guide), `spec.md` (FR-001..FR-015, SC-001..SC-006), `design.md`, `plan.md`, `research.md`, `data-model.md` and `quickstart.md` were updated to the as-built behaviour. Findings above that mention the full-screen overlay, the Navbar being covered, `maxMs`, or the minimum display time are historical. This report has not been re-run against the final code; live checks listed as unverified in `quickstart.md` remain open.
+
+## Closure (2026-10-12)
+
+Spec closed. Docs were synced to the current code (board-scoped guide that persists after drawing; drawing starts after page load and fonts; `TIMING = { drawMs: 1500, minMs: 1700, capMs: 12000 }`; no fade, exit or `maxMs`). Live check on a production preview at desktop width: the loader sits inside `.game-board-inner` with `pointer-events: none`, the figure is painted and stays, freehand strokes appear on top, Clear removes only the strokes, no loader on other routes, no console errors, `npm run build` passes. Not exercised: phone widths, throttled load, reduced motion, failure path. Earlier findings that mention the overlay, fade or `maxMs` are historical.
