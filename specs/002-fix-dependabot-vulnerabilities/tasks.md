@@ -26,7 +26,7 @@ description: "Task list for fixing Dependabot security vulnerabilities"
 
 - [X] T001 Confirm a clean working tree for `package.json` and `package-lock.json` (`git status`), and save the baseline audit to the scratchpad with `npm audit --json` (not committed)
 - [X] T002 [P] Re-fetch the current open alerts (`gh api repos/jayjirakrit/tumi-website/dependabot/alerts?state=open`) and note the package list and count for reconciling against the post-fix audit in `specs/002-fix-dependabot-vulnerabilities/research.md` (read-only; do not edit the file)
-- [ ] T003 [P] Capture the "before" walkthrough: `npm run build && npm run preview`, then note routes and screenshots at 390px and 1280px under `/tumi-website/` (reads `vite.config.js`, changes nothing)
+- [-] T003 [P] Capture the "before" walkthrough: `npm run build && npm run preview`, then note routes and screenshots at 390px and 1280px under `/tumi-website/` (reads `vite.config.js`, changes nothing) (skipped: no before-screenshots captured; closed without them)
 
 **Checkpoint**: Baseline recorded.
 
@@ -87,7 +87,7 @@ No blocking prerequisites beyond Phase 1. Skipped.
 - [X] T015 Run the full validation in `specs/002-fix-dependabot-vulnerabilities/quickstart.md` and record the final `npm audit` result (FR-008)
 - [X] T016 Commit `package.json` and `package-lock.json` only, using a tag from `.sdd.config.json` (for example `[IMP][FE] fix dependabot vulnerabilities`), 
 - [X] T018 [US1] Remove `gh-pages` and the `predeploy`/`deploy` scripts from `package.json` and `package-lock.json` (it was the only parent of the unfixable `braces`), add `.github/workflows/deploy.yml` (Pages deploy on push to `main`), then `npm audit` (0), `npm ci && npm run build`. Owner step: Settings > Pages > Source = GitHub Actions
-- [ ] T017 After merge and push, re-check the dashboard (`gh api repos/jayjirakrit/tumi-website/dependabot/alerts?state=open`) and report the remaining count (SC-001)
+- [X] T017 After merge and push, re-check the dashboard (`gh api repos/jayjirakrit/tumi-website/dependabot/alerts?state=open`) and report the remaining count (SC-001)
 
 ---
 
