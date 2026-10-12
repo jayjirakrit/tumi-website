@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect, use } from "react";
 import Navbar from "../ui/Navbar";
 import "./Game.css";
-import GameLoader from "./GameLoader";
+import GameGuides from "./GameGuides";
 
 const GamePage = () => {
   const canvasRef = useRef(null);
@@ -98,7 +98,7 @@ const GamePage = () => {
         </div>
         <div className="game-board">
           <div className="game-board-inner">
-            <GameLoader />
+            <GameGuides />
             <canvas ref={canvasRef} />
           </div>
         </div>

@@ -1,0 +1,31 @@
+/* Guide row beneath the freehand canvas; never takes input. */
+.game-guides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  pointer-events: none;
+}
+
+/* Each guide becomes an equal slot (outranks .game-loader's absolute inset 0). */
+.game-guides .game-loader,
+.game-guides .ring-guide {
+  position: relative;
+  inset: auto;
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+}
+
+/* Cinnamoroll is the main figure: wider slot and cap; the ring is the smaller companion. */
+.game-guides .game-loader {
+  flex-grow: 6;
+}
+
+.game-guides .ring-guide {
+  flex-grow: 4;
+}
+
+.game-guides .game-loader__stage {
+  width: min(90%, 560px);
+}
