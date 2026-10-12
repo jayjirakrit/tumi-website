@@ -63,8 +63,8 @@ function NavbarUI() {
               </Link>
             </Nav.Link>
             <Nav.Link className="">
-              <Link to="/game">
-                <span className="fw-bold nav-item-cust">Game</span>
+              <Link to="/mon">
+                <span className="fw-bold nav-item-cust">Mon</span>
               </Link>
             </Nav.Link>
           </Nav>

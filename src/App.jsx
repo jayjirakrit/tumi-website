@@ -18,7 +18,7 @@ function App() {
             <Route path="journey" element={<JourneyPage />} />
             <Route path="about" element={<AboutPage />} />
             <Route path="other" element={<MemoryPage />} />
-            <Route path="game" element={<GamePage />} />
+            <Route path="mon" element={<GamePage />} />
             <Route path="*" element={<NoPage />} />
           </Routes>
         </Suspense>
